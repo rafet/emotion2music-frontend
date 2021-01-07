@@ -137,7 +137,7 @@ export default {
       this.loading = true;
       try {
         const res = await axios.get(
-          'http://0.0.0.0:5001/?sentence=' + this.sentence
+          'https://emotion2music-backend.herokuapp.com/?sentence=' + this.sentence
         );
         this.result = res.data.result;
         this.track = res.data.track;
