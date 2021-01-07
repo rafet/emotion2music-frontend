@@ -21,7 +21,7 @@
       >
         {{
           result.result === 0
-            ? 'Seni üzgün gördüm biraz. Umarım her şey istediğin gibi olur. Bu şarkı senin için 😢'
+            ? 'Seni kötü gördüm biraz. Umarım her şey istediğin gibi olur. Bu şarkı senin için 😢'
             : 'Harika! Bugün işler yolunda gitmiş. O zaman bu şarkı sana gelsin! 🙃'
         }}
       </p>
