@@ -2,7 +2,7 @@
   <div>
     <div v-if="!result" class="search-panel">
       <label for="search-bar">Bugün nasıl hissediyorsun?</label>
-      <input v-model="sentence"  type="text" />
+      <input v-model="sentence" type="text" />
       <button @click="getResults">
         <img v-if="loading" src="@/assets/loading.svg" alt="" />
         GÖNDER
@@ -16,7 +16,9 @@
       class="cp"
       style="display:flex;flex-direction:column;align-items:center"
     >
-      <p style="margin-bottom:12px;z-index:11;font-size:18px;text-align:right;max-width:300px;line-spacing:1.3px">
+      <p
+        style="margin-bottom:12px;z-index:11;font-size:18px;text-align:right;max-width:300px;line-spacing:1.3px"
+      >
         {{
           result.result === 0
             ? 'Seni üzgün gördüm biraz. Umarım her şey istediğin gibi olur. Bu şarkı senin için 😢'
@@ -137,7 +139,8 @@ export default {
       this.loading = true;
       try {
         const res = await axios.get(
-          'https://emotion2music-backend.herokuapp.com/?sentence=' + this.sentence
+          'https://emotion2music-backend.herokuapp.com/?sentence=' +
+            this.sentence
         );
         this.result = res.data.result;
         this.track = res.data.track;
@@ -175,7 +178,7 @@ html {
 }
 .search-panel input {
   font-family: Poppins;
-
+  max-width: 90%;
   padding: 16px 30px;
   width: 400px;
   border-radius: 100px;
